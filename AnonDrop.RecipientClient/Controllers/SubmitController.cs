@@ -6,12 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AnonDrop.RecipientClient.Controllers
 {
-	[Route("/")]
 	public class SubmitController : ControllerBase
 	{
 		private readonly Random _rand = new Random();
 
-		[HttpPost("submit")]
 		public IActionResult Submit(string link, string password)
 		{
 			if (string.IsNullOrWhiteSpace(link)
